@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoinFlipper.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label 
+                Text="Coin Flipper"
+                HorizontalOptions="Center"
+                FontSize="40"
+                />
+            <Image
+                Source="heads.jpeg"
+                MaximumWidthRequest="250"
+                MaximumHeightRequest="250"
+                x:Name="ImgCoin"
+                />
+            <Label 
+                Text=""
+                x:Name="WrongRight"
+                /> 
+            <Picker 
+            x:Name="PickerCoin"
+            Title="Side">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Heads</x:String>
+                        <x:String>Tails</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button 
+                Text="FLIP THE COIN"
+                FontSize="15"
+                HorizontalOptions="Center"
+                BackgroundColor="Gray"
+                TextColor="White"
+                Clicked="OnFlipClicked"
+                />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
