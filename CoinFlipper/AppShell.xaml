@@ -3,13 +3,13 @@
     x:Class="CoinFlipper.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:CoinFlipper"
+    xmlns:local="clr-namespace:CoinFlipper.View"
     Shell.FlyoutBehavior="Disabled"
     Title="CoinFlipper">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate local:CoinView}"
         Route="MainPage" />
 
 </Shell>
